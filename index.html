@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="text-lines.png" type="image/x-icon">
+    <title>News Convertor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body class="bg-yellow-50 min-h-screen p-4">
+    <main class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-5xl font-bold mb-4">
+                <span class="bg-white neubrutalism inline-block px-6 py-3">NewsToInstagram</span>
+            </h1>
+            <p class="text-xl text-gray-700">Transform your news into eye-catching Instagram posts. 📰✨</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Input Section -->
+            <div class="space-y-6">
+                <div class="bg-white neubrutalism p-6">
+                    <label class="text-xl font-bold block mb-2">Headline</label>
+                    <input type="text" id="headlineInput" class="w-full p-3 border-2 border-black mb-4" 
+                           placeholder="Enter your headline...">
+                    
+                    <label class="text-xl font-bold block mb-2">Summary</label>
+                    <textarea id="summaryInput" class="w-full p-3 border-2 border-black h-32" 
+                            placeholder="Enter your summary..."></textarea>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <button id="generateBtn" class="bg-pink-500 text-white p-4 neubrutalism font-bold">
+                        Generate Post
+                    </button>
+                    <label for="imageUpload" class="bg-purple-500 text-white p-4 neubrutalism font-bold text-center cursor-pointer">
+                        Upload Image
+                    </label>
+                    <input type="file" id="imageUpload" class="hidden" accept="image/*">
+                </div>
+
+                <div class="bg-white neubrutalism p-6">
+                    <h3 class="text-xl font-bold mb-4">Customize Style</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block mb-2">Headline Font</label>
+                            <select id="headlineFont" class="w-full p-2 neubrutalism">
+                                <option value="font-normal">Normal</option>
+                                <option value="font-medium">Medium</option>
+                                <option value="font-semibold">Semi Bold</option>
+                                <option value="font-bold">Bold</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-2">Summary Font</label>
+                            <select id="summaryFont" class="w-full p-2 neubrutalism">
+                                <option value="font-normal">Normal</option>
+                                <option value="font-medium">Medium</option>
+                                <option value="font-semibold">Semi Bold</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-2">Headline Color</label>
+                            <input type="color" id="headlineColor" class="w-full h-10 neubrutalism">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Summary Color</label>
+                            <input type="color" id="summaryColor" class="w-full h-10 neubrutalism">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="space-y-6">
+                <div id="preview-container" class="bg-white neubrutalism p-6">
+                    <div id="imagePreview" class="w-full h-3/5 bg-gray-100 mb-4 neubrutalism overflow-hidden">
+                        <img id="previewImage" src="https://images.unsplash.com/photo-1504711434969-e33886168f5c" 
+                             class="w-full h-full object-cover" alt="Preview">
+                    </div>
+                    <div id="previewHeadline" class="text-2xl font-bold mb-2"></div>
+                    <div id="previewSummary" class="text-gray-700"></div>
+                    <div id="previewHashtags" class="text-blue-500 text-sm mt-2"></div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <button id="downloadBtn" class="bg-blue-500 text-white p-4 neubrutalism font-bold">
+                        Download Post
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+        <footer>
+            Copyright © 2024 Migangko Rajkonwar. All Rights Reserved
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>
