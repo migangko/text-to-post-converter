@@ -1,7 +1,7 @@
 # text-to-instagram
 # TextToPost
 
-Transform your text into stunning, Instagram-ready posts with **TextToPost**! This web-based tool lets you craft visually appealing social media posts in just a few clicks. Whether you're a content creator, marketer, or simply love designing, TextToPost simplifies the process while offering customization and style.
+Transform your text into stunning, Instagram-ready posts with **TextToPost**. This web-based tool lets you craft visually appealing social media posts in just a few clicks. Whether you're a content creator, marketer, or simply love designing, TextToPost simplifies the process while offering customization and style.
 
 ---
 
